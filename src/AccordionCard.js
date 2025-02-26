@@ -4,15 +4,19 @@ import { useState } from "react";
 function Accordioncard() {
   const [activAccordionNumber, setactivAccordionNumber] = useState(null);
 
+  const handleClick = (accordionNumber) => {
+    if (activAccordionNumber === accordionNumber) {
+      setactivAccordionNumber(null);
+    } else {
+      setactivAccordionNumber(accordionNumber);
+    }
+  };
+
   return (
     <div className="accordion-card">
       <div
         onClick={() => {
-          if (activAccordionNumber === 1) {
-            setactivAccordionNumber(null);
-          } else {
-            setactivAccordionNumber(1);
-          }
+          handleClick(1);
         }}
       >
         11111111111
@@ -20,11 +24,7 @@ function Accordioncard() {
       </div>
       <div
         onClick={() => {
-          if (activAccordionNumber === 2) {
-            setactivAccordionNumber(null);
-          } else {
-            setactivAccordionNumber(2);
-          }
+          handleClick(2);
         }}
       >
         2222222222
@@ -32,11 +32,7 @@ function Accordioncard() {
       </div>
       <div
         onClick={() => {
-          if (activAccordionNumber === 3) {
-            setactivAccordionNumber(null);
-          } else {
-            setactivAccordionNumber(3);
-          }
+          handleClick(3);
         }}
       >
         3333333333
@@ -44,15 +40,11 @@ function Accordioncard() {
       </div>
       <div
         onClick={() => {
-          if (activAccordionNumber === 4) {
-            setactivAccordionNumber(null);
-          } else {
-            setactivAccordionNumber(4);
-          }
+          handleClick(4);
         }}
       >
         444444444
-        {activAccordionNumber === 4 ? <p>text33333 </p> : null}
+        {activAccordionNumber === 4 ? <p>text444444 </p> : null}
       </div>
     </div>
   );
