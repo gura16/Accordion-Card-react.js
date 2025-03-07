@@ -7,8 +7,10 @@ function AccordionItem(props) {
         handleClick(itemNumber);
       }}
     >
-      {title}
-      {activAccordionNumber === itemNumber ? <p>{content} </p> : null}
+      <h1 className="accordion-title">{title}</h1>
+      {activAccordionNumber === itemNumber ? (
+        <p className="accordion-content">{content} </p>
+      ) : null}
     </div>
   );
 }
