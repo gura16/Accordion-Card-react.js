@@ -33,9 +33,11 @@
   flex-direction: column;
   gap: 10px;
   height: 490px;
+  margin-right: 20px;
 }
 .accordion-title {
   font-size: 20px;
+  cursor: pointer;
 }
 .accordion-content {
   width: 300px;
@@ -49,4 +51,21 @@
   position: absolute;
   top: 150px;
   left: -100px;
+}
+
+.question-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.path {
+  width: 10px;
+  height: 8px;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.path1 {
+  transform: rotate(180deg);
 }

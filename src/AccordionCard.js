@@ -1,4 +1,5 @@
 import "./AccordionCard.css";
+import "./App.css";
 import { useState } from "react";
 import AccordionItem from "./Accordionitem";
 import image1 from "./mention_isometric 2.png";
